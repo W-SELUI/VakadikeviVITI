@@ -1,0 +1,97 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeFile="Master.master.vb" Inherits="Assignment_2.Master" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0" />
+    <title>VakadikeviVITI</title>
+    <link rel="stylesheet" type="text/css" href="/style/global.css?v=999" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+
+<body>
+    <form id="form1" runat="server">
+
+        <!-- Header -->
+        <header>
+            <section class="header-left">
+                <img src="/Images/logo.jpg" alt="Website Logo" />
+                <h1>VakadikeviVITI</h1>
+            </section>s
+
+            <section class="header-auth">
+                <asp:HyperLink ID="LoginLink" runat="server" CssClass="login-link" NavigateUrl="~/Login.aspx" Text="Login" />
+                <asp:HyperLink ID="RegisterLink" runat="server" CssClass="register-link" NavigateUrl="~/Register.aspx" Text="Register" />
+            </section>
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="Home.aspx">Home</a></li>
+                <li><a href="Explore.aspx">Explore</a></li>
+                <li><a href="Plan.aspx">Plan</a></li>
+                <li><a href="About.aspx">About</a></li>
+                <li runat="server" id="BookingItem">
+                    <asp:HyperLink ID="BookingLink" runat="server" NavigateUrl="~/Booking.aspx" Text="Booking" />
+                </li>
+
+                <li runat="server" id="Li1">
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Feedback.aspx" Text="Feedback" />
+                </li>
+
+                <li runat="server" id="ManageSiteItem">
+                    <asp:HyperLink ID="ManageSiteLink" runat="server" NavigateUrl="~/Admin.aspx" Text="Manage Site" />
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+
+        <!-- Footer -->
+        <footer>
+            <section>
+                <h3>VakadikeviVITI</h3>
+                <p>Your gateway to unforgettable Fijian experiences.</p>
+            </section>
+
+            <section>
+                <h3>Contact Us</h3>
+                <address>
+                    info@vakadikeviVITI.com<br />
+                    +679 765 1017<br />
+                    USP, Laucala Campus, Suva FIJI
+                </address>
+            </section>
+
+            <section>
+                <h3>Quick Links</h3>
+                <nav>
+                    <ul>
+                        <li><a href="Home.aspx">Home</a></li>
+                        <li><a href="Explore.aspx">Explore</a></li>
+                        <li><a href="Plan.aspx">Plan</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section>
+                <h3>Social Media Platforms</h3>
+                <nav>
+                    <ul>
+                        <li><a href="https://www.tiktok.com/@vakadikeviviti" target="_blank">Tiktok</a></li>
+                        <li><a href="https://www.instagram.com/vakadikeviviti/" target="_blank">Instagram</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </footer>
+
+    </form>
+</body>
+</html>
+
+
+
+

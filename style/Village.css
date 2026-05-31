@@ -1,0 +1,78 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap');
+
+.village-background {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78)), url('/Images/Village.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 5%;
+}
+
+.village-overlay {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.village-content {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(6px);
+    padding: 55px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+    .village-content h1 {
+        color: white;
+        font-size: 56px;
+        font-family: 'Cinzel', serif;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        text-align: center;
+        margin: 0 0 40px 0;
+        text-shadow: 0 5px 15px rgba(0,0,0,0.7);
+    }
+
+.village-info h2 {
+    color: #ffd369;
+    font-size: 26px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+.village-info p {
+    color: #f5f5f5;
+    font-size: 18px;
+    line-height: 1.9;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.book-button {
+    margin-top: 45px;
+    text-align: center;
+}
+
+    .book-button a {
+        display: inline-block;
+        padding: 15px 38px;
+        background: #ff914d;
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 12px;
+        transition: 0.3s ease;
+        font-family: 'Poppins', sans-serif;
+    }
+
+        .book-button a:hover {
+            transform: scale(1.05);
+            background: white;
+        }

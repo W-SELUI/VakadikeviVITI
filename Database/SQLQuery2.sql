@@ -1,0 +1,11 @@
+﻿USE VakadikeviVITI_DB;
+
+CREATE TABLE Packages (
+PackageID INT IDENTITY PRIMARY KEY,
+Name VARCHAR(100),
+Type VARCHAR(50),
+Price DECIMAL(10,2),
+Location VARCHAR(100),
+Description VARCHAR(250)
+
+);

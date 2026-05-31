@@ -1,0 +1,171 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap');
+
+.offer-background {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('/Images/grand.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 5%;
+}
+
+.offer-overlay {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.offer-content {
+    width: 100%;
+    max-width: 950px;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(6px);
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+    .offer-content h1 {
+        color: white;
+        font-size: 52px;
+        font-family: 'Cinzel', serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-align: center;
+        margin-bottom: 40px;
+        text-shadow: 0 5px 15px rgba(0,0,0,0.7);
+    }
+
+.offer-info h2 {
+    color: #ffd369;
+    font-size: 28px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.offer-info h3 {
+    color: white;
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.offer-info p,
+.offer-info li {
+    color: #f5f5f5;
+    font-size: 18px;
+    line-height: 1.8;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.offer-info ul {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.book-button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+    .book-button a {
+        display: inline-block;
+        padding: 15px 35px;
+        background: #ffd369;
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 12px;
+        transition: 0.3s ease;
+        font-family: 'Poppins', sans-serif;
+    }
+
+        .book-button a:hover {
+            transform: scale(1.05);
+            background: white;
+        }
+
+hr {
+    border: 1px solid rgba(255,255,255,0.2);
+    margin: 45px 0;
+}
+
+@media (max-width: 768px) {
+
+    .offer-background {
+        padding: 40px 5%;
+        background-attachment: scroll;
+    }
+
+    .offer-content {
+        padding: 35px;
+    }
+
+        .offer-content h1 {
+            font-size: 38px;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+    .offer-info h2 {
+        font-size: 22px;
+    }
+
+    .offer-info h3 {
+        font-size: 18px;
+    }
+
+    .offer-info p,
+    .offer-info li {
+        font-size: 16px;
+    }
+
+    .book-button a {
+        font-size: 16px;
+        padding: 12px 28px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .offer-background {
+        padding: 30px 4%;
+    }
+
+    .offer-content {
+        padding: 25px;
+        border-radius: 18px;
+    }
+
+        .offer-content h1 {
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+
+    .offer-info h2 {
+        font-size: 18px;
+    }
+
+    .offer-info h3 {
+        font-size: 16px;
+    }
+
+    .offer-info p,
+    .offer-info li {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .book-button a {
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-size: 15px;
+    }
+}

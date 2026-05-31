@@ -1,0 +1,72 @@
+﻿.tours-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 60px 8%;
+}
+
+.tour-card {
+    transition: transform 0.4s ease;
+}
+
+    .tour-card:hover {
+        transform: scale(1.02);
+    }
+
+    .tour-card a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+
+    .tour-card figure {
+        position: relative;
+        overflow: hidden;
+        border-radius: 25px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+        margin: 0;
+    }
+
+    .tour-card img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        display: block;
+        transition: 0.4s ease;
+        filter: brightness(0.75);
+    }
+
+    .tour-card:hover img {
+        transform: scale(1.05);
+        filter: brightness(0.9);
+    }
+
+    .tour-card figcaption {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 35px 40px;
+        background: linear-gradient(to top, rgba(0,0,0,0.92) 25%, rgba(0,0,0,0) 100%);
+        box-sizing: border-box;
+    }
+
+    .tour-card h1 {
+        color: white;
+        font-size: 42px;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin: 0;
+        line-height: 1.2;
+        max-width: 90%;
+    }
+
+    .tour-card p {
+        margin-top: 10px;
+        color: rgba(255,255,255,0.85);
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 90%;
+    }

@@ -1,0 +1,420 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background: linear-gradient( to bottom, #2a2a2a 0%, #1c1c1c 25%, #111111 60%, #050505 100% );
+    overflow-x: hidden;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background: linear-gradient(rgba(35,35,35,0.6), rgba(35,35,35,0.6)), url('../Images/fiji.jpg');
+
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 85px;
+    box-sizing: border-box;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+    .header-left img {
+        height: 60px;
+        width: auto;
+        max-height: 65px;
+        display: block;
+    }
+
+    .header-left h1 {
+        font-size: 26px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin: 0;
+        color: #f5f5f5;
+        font-family: Copperplate, Papyrus, fantasy;
+        white-space: nowrap;
+    }
+
+.header-auth {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+    margin-right: 40px;
+    height: 100%;
+}
+
+.login-link {
+    text-decoration: none;
+    background-color: #b8860b;
+    color: #111;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+    .login-link:hover {
+        background-color: #d4af37;
+        color: black;
+    }
+
+.register-link {
+    text-decoration: none;
+    background-color: transparent;
+    color: #b8860b;
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: 2px solid #b8860b;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+    .register-link:hover {
+        background-color: #b8860b;
+        color: #111;
+    }
+
+
+nav {
+    background-color: #088F8F;
+}
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav a {
+        display: block;
+        padding: 16px 0;
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-size: 15px;
+        transition: opacity 0.3s ease;
+    }
+
+        nav a:hover {
+            opacity: 0.75;
+        }
+
+
+.video-section {
+    text-align: center;
+    padding: 60px 8%;
+    background: transparent;
+    border-top: 1px solid rgba(8, 143, 143, 0.25);
+    border-bottom: 1px solid rgba(8, 143, 143, 0.25);
+}
+
+    .video-section h2 {
+        font-family: Copperplate, Papyrus, fantasy;
+        font-size: 28px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: #96DED1;
+        margin-bottom: 12px;
+    }
+
+    .video-section p {
+        color: #b0d8d8;
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    max-width: 860px;
+    margin: 0 auto;
+    border-radius: 12px;
+    border: 1px solid rgba(8, 143, 143, 0.4);
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(8, 143, 143, 0.2);
+}
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    
+
+footer {
+    background-color: rgba(7, 13, 22, 0.95);
+    color: white;
+    padding: 60px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+    footer section {
+        flex: 1;
+        min-width: 220px;
+    }
+
+    footer h3 {
+        font-family: 'Trebuchet MS', sans-serif;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    footer p,
+    footer address {
+        line-height: 1.7;
+        color: #e0e0e0;
+    }
+
+    footer nav,
+    footer nav ul {
+        background: none !important;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        footer nav ul,
+        footer ul {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer nav li,
+        footer li {
+            margin-bottom: 12px;
+        }
+
+        footer nav a,
+        footer a {
+            text-decoration: none;
+            color: #96DED1;
+            font-weight: normal;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            padding: 0;
+            display: inline-block;
+        }
+
+            footer a:hover {
+                text-decoration: underline;
+            }
+
+/*RESPONSIVE DESIGN*/
+
+/* ===== TABLET (768px) ===== */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        height: auto;
+        padding: 12px 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .header-left h1 {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .header-left img {
+        height: 45px;
+    }
+
+    .header-auth {
+        margin-right: 0;
+        gap: 8px;
+    }
+
+    .login-link,
+    .register-link {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    /* NAV */
+    nav ul {
+        flex-wrap: wrap;
+        padding: 0 20px;
+        justify-content: center;
+        gap: 0 16px;
+    }
+
+    nav a {
+        font-size: 13px;
+        letter-spacing: 1px;
+        padding: 12px 0;
+    }
+
+    /* VIDEO */
+    .video-section {
+        padding: 40px 5%;
+    }
+
+        .video-section h2 {
+            font-size: 22px;
+        }
+
+    /* FOOTER */
+    footer {
+        padding: 40px 5%;
+        gap: 30px;
+    }
+
+        footer section {
+            min-width: 160px;
+        }
+
+        footer h3 {
+            font-size: 16px;
+        }
+}
+
+/* ===== MOBILE (480px) ===== */
+@media (max-width: 480px) {
+
+    /* HEADER */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 12px 16px;
+    }
+
+    .header-left h1 {
+        font-size: 15px;
+    }
+
+    .header-left img {
+        height: 38px;
+    }
+
+    .header-auth {
+        width: 100%;
+        justify-content: flex-start;
+        margin-right: 0;
+    }
+
+    .login-link,
+    .register-link {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+
+    /* NAV */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: 0;
+    }
+
+        nav ul li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+    nav a {
+        font-size: 13px;
+        padding: 12px 0;
+    }
+
+    /* VIDEO */
+    .video-section {
+        padding: 30px 4%;
+    }
+
+        .video-section h2 {
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+    /* FOOTER */
+    footer {
+        flex-direction: column;
+        padding: 30px 5%;
+        gap: 24px;
+    }
+
+        footer section {
+            min-width: unset;
+            width: 100%;
+        }
+
+        footer h3 {
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.search-input {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    font-size: 0.9em;
+    width: 200px;
+}
+
+.search-btn {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+    .search-btn:hover {
+        background-color: #0056b3;
+    }

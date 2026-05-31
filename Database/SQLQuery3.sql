@@ -1,0 +1,9 @@
+﻿CREATE TABLE Bookings (
+BookingID INT IDENTITY PRIMARY KEY,
+UserID INT,
+PackageID INT,
+BookingDate DATE,
+
+FOREIGN KEY(UserID) REFERENCES Users(UserID),
+FOREIGN KEY(PackageID) REFERENCES Packages(PackageID)
+);	
