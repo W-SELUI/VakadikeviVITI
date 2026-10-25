@@ -65,13 +65,6 @@ It helps visitors discover Fiji's restaurants, activities, tours, accommodation 
 
 The **database creates itself** the first time the site runs, from `Database/CreateDatabase.sql`. It sets up the tables, travel packages and admin accounts, so there's no manual SQL setup.
 
-### Demo admin login
-| Username | Password |
-|---|---|
-| `wselui` | `Admin000` |
-
-> These are demo accounts for local testing only. Change them before hosting the site anywhere public.
-
 ---
 
 ## Database
