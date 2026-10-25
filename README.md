@@ -5,7 +5,7 @@
 VakadikeviVITI (also known as **ExploreFiji**) is a tourism website built for **IS221 – Assignment 2** at the **University of the South Pacific (USP)**.
 It helps visitors discover Fiji's restaurants, activities, tours, accommodation and transport, and book experiences online. It also gives admins a dashboard to manage users, bookings, feedback and travel packages.
 
-> *Vakadikevi* — to explore, to discover. **VITI** — Fiji.
+*Vakadikevi* — to explore, to discover. **VITI** — Fiji.
 
 ---
 
@@ -131,4 +131,4 @@ A2/
 **IS221 – Assignment 2**
 University of the South Pacific (USP), Laucala Campus, Suva, Fiji
 
-> Built as a university assignment for educational purposes. The photos and business names are used for demonstration only.
+Built as a university assignment for educational purposes. The photos and business names are used for demonstration only.
