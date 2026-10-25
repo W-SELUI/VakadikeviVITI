@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Tiko's Floating Restaurant" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeFile="Tikos.aspx.vb" Inherits="Assignment_2.Tikos" %>
+﻿<%@ Page Title="Tiko's Floating Restaurant" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeBehind="Tikos.aspx.vb" Inherits="Assignment_2.Tikos" %>
 <%@ Register Src="~/BookingCard.ascx" TagPrefix="uc" TagName="BookingCard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">

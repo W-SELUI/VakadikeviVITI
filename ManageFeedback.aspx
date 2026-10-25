@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="Manage Feedback" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" 
-    CodeFile="ManageFeedback.aspx.vb" Inherits="Assignment_2.ManageFeedback" %>
+    CodeBehind="ManageFeedback.aspx.vb" Inherits="Assignment_2.ManageFeedback" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <title>Manage Feedback</title>

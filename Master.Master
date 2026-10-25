@@ -1,4 +1,4 @@
-﻿﻿<%@ Master Language="VB" AutoEventWireup="false" CodeFile="Master.master.vb" Inherits="Assignment_2.Master" %>
+﻿﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Master.master.vb" Inherits="Assignment_2.Master" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">

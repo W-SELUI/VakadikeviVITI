@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="Feedback" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" 
-    CodeFile="Feedback.aspx.vb" Inherits="Assignment_2.Feedback" %>
+    CodeBehind="Feedback.aspx.vb" Inherits="Assignment_2.Feedback" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <link href="/style/Feedback.css?v=dark2" rel="stylesheet" type="text/css" />

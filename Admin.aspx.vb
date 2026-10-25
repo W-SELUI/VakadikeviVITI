@@ -1,7 +1,6 @@
 ﻿Imports System
 Imports System.Web.UI
 
-Namespace Assignment_2
     Public Class Admin
         Inherits System.Web.UI.Page
 
@@ -12,4 +11,3 @@ Namespace Assignment_2
             End If
         End Sub
     End Class
-End Namespace

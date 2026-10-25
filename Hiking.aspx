@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Hiking in Fiji" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeFile="Hiking.aspx.vb" Inherits="Assignment_2.Hiking" %>
+﻿<%@ Page Title="Hiking in Fiji" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeBehind="Hiking.aspx.vb" Inherits="Assignment_2.Hiking" %>
 <%@ Register Src="~/BookingCard.ascx" TagPrefix="uc" TagName="BookingCard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">

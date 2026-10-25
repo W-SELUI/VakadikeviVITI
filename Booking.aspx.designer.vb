@@ -1,7 +1,6 @@
 ﻿Option Strict On
 Option Explicit On
 
-Namespace Assignment_2
     Partial Public Class Booking
         Protected WithEvents lblMessage As Global.System.Web.UI.WebControls.Label
         Protected WithEvents lblName As Global.System.Web.UI.WebControls.Label
@@ -14,5 +13,4 @@ Namespace Assignment_2
         Protected WithEvents txtSpecialRequests As Global.System.Web.UI.WebControls.TextBox
         Protected WithEvents btnBook As Global.System.Web.UI.WebControls.Button
     End Class
-End Namespace
 

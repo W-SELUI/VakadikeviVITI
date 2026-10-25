@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Explore" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeFile="Explore.aspx.vb" Inherits="Assignment_2.Explore" %>
+﻿<%@ Page Title="Explore" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeBehind="Explore.aspx.vb" Inherits="Assignment_2.Explore" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <link href="/style/Explore.css?v=dark2" rel="stylesheet" type="text/css" />

@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="Booking" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" 
-    CodeFile="Booking.aspx.vb" Inherits="Assignment_2.Booking" %>
+    CodeBehind="Booking.aspx.vb" Inherits="Assignment_2.Booking" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <title>Booking</title>

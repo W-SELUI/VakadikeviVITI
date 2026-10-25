@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Outrigger Fiji Beach Resort" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeFile="Outtrigger.aspx.vb" Inherits="Assignment_2.Outtrigger" %>
+﻿<%@ Page Title="Outrigger Fiji Beach Resort" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeBehind="Outtrigger.aspx.vb" Inherits="Assignment_2.Outtrigger" %>
 <%@ Register Src="~/BookingCard.ascx" TagPrefix="uc" TagName="BookingCard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">

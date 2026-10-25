@@ -1,7 +1,6 @@
 ﻿Option Strict On
 Option Explicit On
 
-Namespace Assignment_2
     Partial Public Class ManageContent
         Protected WithEvents lblMessage As Global.System.Web.UI.WebControls.Label
         Protected WithEvents hdnPackageID As Global.System.Web.UI.WebControls.HiddenField
@@ -15,4 +14,3 @@ Namespace Assignment_2
         Protected WithEvents gvPackages As Global.System.Web.UI.WebControls.GridView
         Protected WithEvents formTitle As Global.System.Web.UI.HtmlControls.HtmlGenericControl
     End Class
-End Namespace

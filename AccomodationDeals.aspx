@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Accommodation Deals" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeFile="AccomodationDeals.aspx.vb" Inherits="Assignment_2.AccomodationDeals" %>
+﻿<%@ Page Title="Accommodation Deals" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeBehind="AccomodationDeals.aspx.vb" Inherits="Assignment_2.AccomodationDeals" %>
 <%@ Register Src="~/BookingCard.ascx" TagPrefix="uc" TagName="BookingCard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">

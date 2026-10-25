@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Restaurant" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeFile="Restaurant.aspx.vb" Inherits="Assignment_2.Restaurant" %>
+﻿<%@ Page Title="Restaurant" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeBehind="Restaurant.aspx.vb" Inherits="Assignment_2.Restaurant" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <link href="/style/Restaurant.css?v=dark2" rel="stylesheet" type="text/css" />

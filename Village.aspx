@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Village Tours in Fiji" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeFile="Village.aspx.vb" Inherits="Assignment_2.Village" %>
+﻿<%@ Page Title="Village Tours in Fiji" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeBehind="Village.aspx.vb" Inherits="Assignment_2.Village" %>
 <%@ Register Src="~/BookingCard.ascx" TagPrefix="uc" TagName="BookingCard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">

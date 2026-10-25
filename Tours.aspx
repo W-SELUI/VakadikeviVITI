@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Tours in Fiji" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeFile="Tours.aspx.vb" Inherits="Assignment_2.Tours" %>
+﻿<%@ Page Title="Tours in Fiji" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeBehind="Tours.aspx.vb" Inherits="Assignment_2.Tours" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <link href="/style/Tours.css?v=dark2" rel="stylesheet" type="text/css" />

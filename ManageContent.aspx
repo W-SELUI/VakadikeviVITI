@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="Manage Content" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" 
-    CodeFile="ManageContent.aspx.vb" Inherits="Assignment_2.ManageContent" %>
+    CodeBehind="ManageContent.aspx.vb" Inherits="Assignment_2.ManageContent" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <title>Manage Content</title>

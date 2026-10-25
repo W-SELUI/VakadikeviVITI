@@ -1,7 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Configuration
 
-Namespace Assignment_2
     Public Class Register
         Inherits System.Web.UI.Page
 
@@ -57,5 +56,4 @@ Namespace Assignment_2
 
         End Sub
     End Class
-End Namespace
 

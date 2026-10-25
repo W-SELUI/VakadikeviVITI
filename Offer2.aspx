@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Outrigger Resort Offers" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeFile="Offer2.aspx.vb" Inherits="Assignment_2.Offer2" %>
+﻿<%@ Page Title="Outrigger Resort Offers" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeBehind="Offer2.aspx.vb" Inherits="Assignment_2.Offer2" %>
 <%@ Register Src="~/BookingCard.ascx" TagPrefix="uc" TagName="BookingCard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">

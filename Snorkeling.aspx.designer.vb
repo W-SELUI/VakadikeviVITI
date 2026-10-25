@@ -12,5 +12,5 @@ Option Explicit On
 
 
 
-Partial Public Class Snorkelling
+Partial Public Class Snorkeling
 End Class

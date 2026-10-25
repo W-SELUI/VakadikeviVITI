@@ -3,7 +3,6 @@ Imports System.Data.SqlClient
 
 
 
-Namespace Assignment_2
     Public Class ManageBookings
         Inherits System.Web.UI.Page
 
@@ -80,4 +79,3 @@ Namespace Assignment_2
         End Sub
 
     End Class
-End Namespace

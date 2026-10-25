@@ -1,7 +1,6 @@
 ﻿Option Strict On
 Option Explicit On
 
-Namespace Assignment_2
     Partial Public Class Master
         Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
         Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
@@ -22,7 +21,6 @@ Namespace Assignment_2
         Protected WithEvents ManageSiteItem As Global.System.Web.UI.HtmlControls.HtmlGenericControl
         Protected WithEvents ManageSiteLink As Global.System.Web.UI.WebControls.HyperLink
     End Class
-End Namespace
 
 
 

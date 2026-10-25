@@ -237,6 +237,22 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Master.Master" />
+    <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="My Project\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="My Project\PublishProfiles\FolderProfile10.pubxml" />
+    <None Include="My Project\PublishProfiles\FolderProfile11.pubxml" />
+    <None Include="My Project\PublishProfiles\FolderProfile12.pubxml" />
+    <None Include="My Project\PublishProfiles\FolderProfile13.pubxml" />
+    <None Include="My Project\PublishProfiles\FolderProfile2.pubxml" />
+    <None Include="My Project\PublishProfiles\FolderProfile3.pubxml" />
+    <None Include="My Project\PublishProfiles\FolderProfile4.pubxml" />
+    <None Include="My Project\PublishProfiles\FolderProfile5.pubxml" />
+    <None Include="My Project\PublishProfiles\FolderProfile6.pubxml" />
+    <None Include="My Project\PublishProfiles\FolderProfile7.pubxml" />
+    <None Include="My Project\PublishProfiles\FolderProfile8.pubxml" />
+    <None Include="My Project\PublishProfiles\FolderProfile9.pubxml" />
+    <None Include="My Project\PublishProfiles\FTPProfile.pubxml" />
+    <None Include="My Project\PublishProfiles\site101710-WebDeploy.pubxml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -651,7 +667,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Database\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

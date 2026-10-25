@@ -1,5 +1,4 @@
-﻿Namespace Assignment_2
-    Public Class Master
+﻿    Public Class Master
         Inherits System.Web.UI.MasterPage
 
         Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
@@ -42,7 +41,6 @@
             End If
         End Sub
     End Class
-End Namespace
 
 
 

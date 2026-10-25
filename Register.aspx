@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Register" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeFile="Register.aspx.vb" Inherits="Assignment_2.Register" %>
+﻿<%@ Page Title="Register" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeBehind="Register.aspx.vb" Inherits="Assignment_2.Register" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <link href="/style/Register.css?v=dark2" rel="stylesheet" type="text/css" />

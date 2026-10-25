@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Plan" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeFile="Plan.aspx.vb" Inherits="Assignment_2.Plan" %>
+﻿<%@ Page Title="Plan" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeBehind="Plan.aspx.vb" Inherits="Assignment_2.Plan" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <link href="/style/Plan.css?v=dark2" rel="stylesheet" type="text/css" />
