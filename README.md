@@ -9,7 +9,7 @@ It helps visitors discover Fiji's restaurants, activities, tours, accommodation 
 
 ---
 
-## ✨ Features
+## Features
 
 ### For visitors
 - **Explore Fiji:** restaurants, activities (hiking, snorkeling, kayaking), tours (island hopping, village visits) and accommodation
@@ -34,7 +34,7 @@ It helps visitors discover Fiji's restaurants, activities, tours, accommodation 
 
 ---
 
-## 🛠️ Built With
+## Built With
 
 | Part | Technology |
 |---|---|
@@ -47,7 +47,7 @@ It helps visitors discover Fiji's restaurants, activities, tours, accommodation 
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Requirements
 - **Visual Studio 2022 or newer** with the **ASP.NET and web development** workload
@@ -70,11 +70,11 @@ The **database creates itself** the first time the site runs, from `Database/Cre
 |---|---|
 | `wselui` | `Admin000` |
 
-> ⚠️ These are demo accounts for local testing only. Change them before hosting the site anywhere public.
+> These are demo accounts for local testing only. Change them before hosting the site anywhere public.
 
 ---
 
-## 🗄️ Database
+## Database
 
 | Table | Purpose |
 |---|---|
@@ -87,7 +87,7 @@ The **database creates itself** the first time the site runs, from `Database/Cre
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 A2/
@@ -111,7 +111,7 @@ A2/
 
 ---
 
-## 🧯 Troubleshooting
+## Troubleshooting
 
 | Problem | Fix |
 |---|---|
@@ -122,7 +122,7 @@ A2/
 
 ---
 
-## 👥 Team — Group SAIPE
+## Team — Group SAIPE
 
 | Name | Role |
 |---|---|
