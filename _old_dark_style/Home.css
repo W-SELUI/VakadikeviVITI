@@ -1,0 +1,344 @@
+﻿.first-part {
+    width: 100%;
+    min-height: 90vh;
+
+    background-image: url("../Images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    padding: 40px 20px;
+}
+
+.first-part h2 {
+    font-size: 48px;
+    letter-spacing: 4px;
+    margin: 0 0 15px 0;
+    font-family: "Brush Script MT", cursive;
+}
+
+.first-part p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 0 25px 0;
+    line-height: 1.6;
+}
+
+.first-part .boxed-text {
+    padding: 12px 28px;
+
+    background-color: #088F8F;
+    border: 2px solid white;
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.first-part .boxed-text:hover {
+    background-color: transparent;
+}
+
+/* ================= SECOND PART ================= */
+
+.second-part {
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    background: transparent;
+}
+
+.second-part h2 {
+    font-size: 36px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.second-part p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+    color: #e0e0e0;
+}
+
+.second-part h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #088F8F;
+    margin: 15px auto 0;
+}
+
+/* ================= IMAGE SECTIONS ================= */
+
+.first-image,
+.second-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+
+    padding: 120px 8%;
+
+    flex-wrap: wrap;
+}
+
+.first-image .text-content,
+.second-image .content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.first-image .text-content h2,
+.second-image .content h2 {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 42px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.first-image .text-content p,
+.second-image .content p {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 19px;
+    line-height: 1.8;
+    color: #f0f0f0;
+}
+
+.first-image .image-content,
+.second-image .image-content {
+    flex: 1 1 300px;
+}
+
+.first-image img,
+.second-image img {
+    width: 600px;
+    height: 450px;
+    object-fit: cover;
+
+    border-radius: 45px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* ================= REASONS ================= */
+
+.reasons {
+    padding: 100px 5%;
+    text-align: center;
+    background: transparent;
+}
+
+.reasons h2 {
+    font-size: 42px;
+    font-family: "Times New Roman", Times, serif;
+    margin-bottom: 60px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.reasons ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.reasons li {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reasons figure {
+    margin: 0 0 20px 0;
+}
+
+.reasons figure img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 3px solid #088F8F;
+    background-color: #2a2a2a;
+}
+
+.reasons h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.reasons p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    max-width: 300px;
+}
+
+/* ===== PDF DOWNLOAD SECTION ===== */
+
+.download-section {
+    text-align: center;
+    padding: 40px 8%;
+    border-bottom: 1px solid rgba(8, 143, 143, 0.25);
+}
+
+    .download-section h2 {
+        font-family: Copperplate, Papyrus, fantasy;
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: #96DED1;
+        margin-bottom: 10px;
+    }
+
+    .download-section p {
+        color: #b0d8d8;
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+
+.download-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #088F8F;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.15s ease;
+}
+
+    .download-btn:hover {
+        background-color: #0aafaf;
+        transform: translateY(-2px);
+    }
+
+/* ================= TABLET ================= */
+
+@media (max-width: 768px) {
+
+    .first-part {
+        min-height: 85vh;
+        padding: 30px 20px;
+    }
+
+        .first-part h2 {
+            font-size: 34px;
+            letter-spacing: 2px;
+        }
+
+        .first-part p {
+            font-size: 16px;
+        }
+
+    .second-part h2,
+    .reasons h2,
+    .first-image .text-content h2,
+    .second-image .content h2 {
+        font-size: 30px;
+    }
+
+    .first-image,
+    .second-image {
+        gap: 40px;
+        padding: 80px 5%;
+    }
+
+        .first-image img,
+        .second-image img {
+            width: 100%;
+            height: auto;
+        }
+
+    .reasons ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .reasons li {
+        flex: 1 1 250px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .first-part {
+        min-height: 80vh;
+    }
+
+        .first-part h2 {
+            font-size: 26px;
+        }
+
+        .first-part p {
+            font-size: 14px;
+        }
+
+    .first-image,
+    .second-image {
+        padding: 60px 5%;
+        gap: 30px;
+    }
+
+        .first-image .text-content h2,
+        .second-image .content h2,
+        .second-part h2,
+        .reasons h2 {
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+
+        .first-image .text-content p,
+        .second-image .content p,
+        .second-part p,
+        .reasons p {
+            font-size: 15px;
+        }
+
+    .reasons ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reasons figure img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .download-section h2 {
+        font-size: 18px;
+    }
+
+    .download-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}

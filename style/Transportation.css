@@ -1,36 +1,27 @@
-﻿.transport-container {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    padding: 60px 8%;
+/* Transportation page - cards side by side. Card look comes from global.css */
+
+.transport-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 5% 0;
 }
 
 .transport-card {
-    transition: transform 0.4s ease;
+    --card-h: 340px;
 }
 
-    .transport-card:hover {
-        transform: scale(1.02);
+@media (max-width: 900px) {
+    .transport-container {
+        grid-template-columns: 1fr 1fr;
     }
+}
 
-    .transport-card a {
-        text-decoration: none;
-        color: inherit;
-        display: block;
+@media (max-width: 600px) {
+    .transport-container {
+        grid-template-columns: 1fr;
+        padding-top: 28px;
     }
-
-    .transport-card figure {
-        position: relative;
-        overflow: hidden;
-        border-radius: 25px;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-        margin: 0;
-    }
-
-    .transport-card img {
-        width: 100%;
-        height: 450px;
-        object-fit: cover;
-        display: block;
-        transition: 0.4s ease;
-        filter: brightness(0.75
+}

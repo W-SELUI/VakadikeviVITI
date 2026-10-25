@@ -1,51 +1,54 @@
-﻿<%@ Master Language="VB" AutoEventWireup="false" CodeFile="Master.master.vb" Inherits="Assignment_2.Master" %>
+﻿﻿<%@ Master Language="VB" AutoEventWireup="false" CodeFile="Master.master.vb" Inherits="Assignment_2.Master" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head runat="server">
-    <meta name="viewport" content="width=device-width", initial-scale="1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VakadikeviVITI</title>
-    <link rel="stylesheet" type="text/css" href="/style/global.css?v=999" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=DM+Serif+Display&amp;display=swap" />
+    <link rel="stylesheet" type="text/css" href="/style/global.css?v=dark2" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
 </head>
 
 <body>
     <form id="form1" runat="server">
 
-        <!-- Header -->
-        <header>
+        <!-- Header: logo | menu | login (one bar that sticks to the top) -->
+        <header class="site-header">
             <section class="header-left">
                 <img src="/Images/logo.jpg" alt="Website Logo" />
                 <h1>VakadikeviVITI</h1>
-            </section>s
+            </section>
+
+            <!-- Navigation -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="Home.aspx">Home</a></li>
+                    <li><a href="Explore.aspx">Explore</a></li>
+                    <li><a href="Plan.aspx">Plan</a></li>
+                    <li><a href="About.aspx">About</a></li>
+                    <li runat="server" id="BookingItem">
+                        <asp:HyperLink ID="BookingLink" runat="server" NavigateUrl="~/Booking.aspx" Text="Booking" />
+                    </li>
+
+                    <li runat="server" id="Li1">
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Feedback.aspx" Text="Feedback" />
+                    </li>
+
+                    <li runat="server" id="ManageSiteItem">
+                        <asp:HyperLink ID="ManageSiteLink" runat="server" NavigateUrl="~/Admin.aspx" Text="Manage Site" />
+                    </li>
+                </ul>
+            </nav>
 
             <section class="header-auth">
                 <asp:HyperLink ID="LoginLink" runat="server" CssClass="login-link" NavigateUrl="~/Login.aspx" Text="Login" />
                 <asp:HyperLink ID="RegisterLink" runat="server" CssClass="register-link" NavigateUrl="~/Register.aspx" Text="Register" />
             </section>
         </header>
-
-        <!-- Navigation -->
-        <nav>
-            <ul>
-                <li><a href="Home.aspx">Home</a></li>
-                <li><a href="Explore.aspx">Explore</a></li>
-                <li><a href="Plan.aspx">Plan</a></li>
-                <li><a href="About.aspx">About</a></li>
-                <li runat="server" id="BookingItem">
-                    <asp:HyperLink ID="BookingLink" runat="server" NavigateUrl="~/Booking.aspx" Text="Booking" />
-                </li>
-
-                <li runat="server" id="Li1">
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Feedback.aspx" Text="Feedback" />
-                </li>
-
-                <li runat="server" id="ManageSiteItem">
-                    <asp:HyperLink ID="ManageSiteLink" runat="server" NavigateUrl="~/Admin.aspx" Text="Manage Site" />
-                </li>
-            </ul>
-        </nav>
 
         <!-- Main Content -->
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
@@ -61,8 +64,8 @@
                 <h3>Contact Us</h3>
                 <address>
                     info@vakadikeviVITI.com<br />
-                    +679 765 1017<br />
-                    USP, Laucala Campus, Suva FIJI
+                    +679 123 4567<br />
+                    Nadi, Fiji Islands
                 </address>
             </section>
 
@@ -76,22 +79,35 @@
                     </ul>
                 </nav>
             </section>
-
-            <section>
-                <h3>Social Media Platforms</h3>
-                <nav>
-                    <ul>
-                        <li><a href="https://www.tiktok.com/@vakadikeviviti" target="_blank">Tiktok</a></li>
-                        <li><a href="https://www.instagram.com/vakadikeviviti/" target="_blank">Instagram</a></li>
-                    </ul>
-                </nav>
-            </section>
         </footer>
 
     </form>
+
+    <!-- Small UI script: underlines the menu item for the page you are on.
+         It only changes how things look - no page logic. -->
+    <script>
+        (function () {
+            // 1) Highlight the menu item for the page (or section) you are on
+            var page = (location.pathname.split('/').pop() || 'Home.aspx').toLowerCase();
+            var sections = {
+                'explore.aspx': ['restaurant.aspx', 'tikos.aspx', 'anpho.aspx', 'activities.aspx', 'hiking.aspx',
+                    'snorkeling.aspx', 'kayaking.aspx', 'tours.aspx', 'islandshopping.aspx', 'village.aspx',
+                    'accommodation.aspx', 'grandpacific.aspx', 'outtrigger.aspx'],
+                'plan.aspx': ['transportation.aspx', 'airtravel.aspx', 'bus.aspx', 'taxi.aspx',
+                    'accomodationdeals.aspx', 'offer1.aspx', 'offer2.aspx'],
+                'admin.aspx': ['manageusers.aspx', 'managebooking.aspx', 'managefeedback.aspx', 'managecontent.aspx'],
+                'home.aspx': ['default.aspx', '']
+            };
+            var current = page;
+            for (var parent in sections) {
+                if (sections[parent].indexOf(page) !== -1) { current = parent; }
+            }
+            var links = document.querySelectorAll('.main-nav a');
+            for (var i = 0; i < links.length; i++) {
+                var href = (links[i].getAttribute('href') || '').split('/').pop().split('?')[0].toLowerCase();
+                if (href === current) { links[i].classList.add('active'); }
+            }
+        })();
+    </script>
 </body>
 </html>
-
-
-
-

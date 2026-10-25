@@ -5,15 +5,14 @@
         Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
             ' Check login state
             If Session("UserLoggedIn") IsNot Nothing AndAlso Session("UserLoggedIn") = True Then
-
                 ' Swap Login → Logout
                 LoginLink.Text = "Logout"
                 LoginLink.NavigateUrl = "~/Logout.aspx"
 
-
+                ' Hide Register when logged in
                 RegisterLink.Visible = False
 
-
+                ' Role-based navigation
                 If Session("Role") IsNot Nothing Then
                     Dim role As String = Session("Role").ToString()
 

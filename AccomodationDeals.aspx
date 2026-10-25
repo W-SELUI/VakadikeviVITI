@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="Accommodation Deals" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeFile="AccomodationDeals.aspx.vb" Inherits="Assignment_2.AccomodationDeals" %>
+<%@ Register Src="~/BookingCard.ascx" TagPrefix="uc" TagName="BookingCard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <link href="/style/AccommodationDeals.css" rel="stylesheet" type="text/css" />
+    <link href="/style/AccommodationDeals.css?v=dark2" rel="stylesheet" type="text/css" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -59,6 +60,10 @@
                     </a>
 
                 </section>
+
+                <!-- Booking box (price + Book Now) -->
+                <uc:BookingCard ID="BookingCard1" runat="server" PackageIDs="8,9,10,11" />
+
 
             </article>
 

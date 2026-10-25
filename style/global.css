@@ -1,168 +1,873 @@
-﻿* {
+/* =====================================================================
+   VakadikeviVITI - global styles (DARK TROPICAL)
+   Colours, fonts, header, footer, buttons and the shared page layouts.
+   Change the colours in :root and the whole site follows.
+   ===================================================================== */
+
+:root {
+    /* Colours - deep ocean at dusk */
+    --bg: #071E26;              /* page background */
+    --surface: #0C2A33;         /* cards */
+    --surface-2: #10343F;       /* panels / hover */
+    --ink: #F2F7F6;             /* headings / main text */
+    --ink-soft: #B4CBCB;        /* paragraph text */
+    --muted: #84A0A4;           /* small text */
+    --line: #1A4350;            /* borders */
+    --line-strong: #2A5D6A;     /* borders on hover */
+    --primary: #2EC4B6;         /* turquoise - links, Login */
+    --primary-dark: #7FE3D8;    /* lighter turquoise for text on dark */
+    --primary-soft: #11414A;    /* turquoise-tinted panels */
+    --teal: #2EC4B6;
+    --accent: #F26B4B;          /* coral - "Book Now" */
+    --accent-hover: #E0573A;
+    --accent-dark: #FF9C7A;     /* lighter coral for text on dark */
+    --sun: #FFD166;
+    --danger: #FF7B7B;
+    --footer: #04161C;
+
+    /* Kept so older page styles still work - now plain colours, no gradients */
+    --grad-ocean: var(--primary);
+    --grad-sunset: var(--accent);
+    --grad-sun: var(--accent);
+
+    /* Shape */
+    --radius-sm: 6px;
+    --radius: 10px;
+    --radius-lg: 12px;
+    --shadow-sm: none;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 30px -12px rgba(0, 0, 0, 0.55);
+
+    /* Spacing between big sections */
+    --section: 64px;
+
+    /* Motion */
+    --ease: cubic-bezier(0.22, 0.8, 0.24, 1);
+
+    /* Fonts: a travel-magazine serif for headings, a clean sans for text */
+    --font-display: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+    --font-body: 'DM Sans', 'Segoe UI', Arial, sans-serif;
+
+    /* Wave under the photo heroes (filled with the page colour) */
+    --wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 90' preserveAspectRatio='none'%3E%3Cpath fill='%23071E26' d='M0 46c120 22 240 36 360 30S600 36 720 30s240 4 360 18 240 26 360 14v28H0z'/%3E%3C/svg%3E");
+}
+
+/* ---------- Base ---------- */
+* {
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+    /* the heading font has one weight - never fake a bold version */
+    font-synthesis: none;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--ink);
+    background: var(--bg);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* keeps the footer at the bottom on short pages */
+#form1 {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+    :where(#form1 > *) {
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    #form1 > footer {
+        margin-top: auto;
+    }
+
+    /* space between the page content and the footer */
+    :where(#form1 > *:has(+ footer)) {
+        margin-bottom: var(--section);
+    }
 
 img {
     max-width: 100%;
     height: auto;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #ffffff;
-    background: linear-gradient( to bottom, #2a2a2a 0%, #1c1c1c 25%, #111111 60%, #050505 100% );
-    overflow-x: hidden;
+h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.15;
 }
 
+a {
+    color: var(--primary);
+}
 
-header {
+::selection {
+    background: rgba(46, 196, 182, 0.35);
+    color: #fff;
+}
+
+/* ASP.NET labels set their colour in code (Green / Red / Gray).
+   Brighten them so they are readable on the dark background. */
+span[style*="color:Green"] {
+    color: #5EE6A8 !important;
+}
+
+span[style*="color:Red"] {
+    color: #FF8A8A !important;
+}
+
+span[style*="color:Gray"] {
+    color: var(--muted) !important;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* =====================================================================
+   HEADER - one bar: logo | menu | login
+   ===================================================================== */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 40px;
-    background: linear-gradient(rgba(35,35,35,0.6), rgba(35,35,35,0.6)), url('../Images/fiji.jpg');
-
-    background-size:cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    height: 85px;
-    box-sizing: border-box;
+    gap: 28px;
+    padding: 0 40px;
+    height: 68px;
+    background: rgba(7, 30, 38, 0.94);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
 }
 
 .header-left {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     gap: 12px;
+    flex-shrink: 0;
 }
 
     .header-left img {
-        height: 60px;
-        width: auto;
-        max-height: 65px;
         display: block;
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid var(--line-strong);
     }
 
     .header-left h1 {
-        font-size: 26px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
         margin: 0;
-        color: #f5f5f5;
-        font-family: Copperplate, Papyrus, fantasy;
+        font-family: var(--font-display);
+        font-size: 24px;
+        font-weight: 400;
         white-space: nowrap;
+        color: var(--ink);
     }
+
+/* Main menu */
+.main-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-self: stretch;
+}
+
+    .main-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: stretch;
+        gap: 26px;
+    }
+
+    .main-nav li {
+        display: flex;
+    }
+
+    .main-nav a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: var(--ink-soft);
+        font-size: 15px;
+        font-weight: 500;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: color 0.2s ease;
+    }
+
+        .main-nav a:hover {
+            color: var(--ink);
+        }
+
+        /* current page - set by the script in Master.Master */
+        .main-nav a.active {
+            color: var(--ink);
+        }
+
+            .main-nav a.active::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -1px;
+                height: 2px;
+                background: var(--accent);
+            }
 
 .header-auth {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-left: auto;
-    margin-right: 40px;
-    height: 100%;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.login-link,
+.register-link {
+    padding: 8px 18px;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .login-link {
-    text-decoration: none;
-    background-color: #b8860b;
-    color: #111;
-    padding: 8px 18px;
-    border-radius: 6px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: 0.3s ease;
+    background: var(--primary);
+    color: #04232A;
 }
 
     .login-link:hover {
-        background-color: #d4af37;
-        color: black;
+        background: var(--primary-dark);
     }
 
 .register-link {
-    text-decoration: none;
-    background-color: transparent;
-    color: #b8860b;
-    padding: 8px 18px;
-    border-radius: 6px;
-    border: 2px solid #b8860b;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: 0.3s ease;
+    color: var(--ink);
+    border-color: var(--line-strong);
 }
 
     .register-link:hover {
-        background-color: #b8860b;
-        color: #111;
+        border-color: var(--ink-soft);
     }
 
-
-nav {
-    background-color: #088F8F;
+/* =====================================================================
+   FOOTER
+   ===================================================================== */
+footer {
+    background: var(--footer);
+    border-top: 1px solid var(--line);
+    color: var(--ink-soft);
+    padding: 48px 8% 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-    nav ul {
-        list-style: none;
+    footer section {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    footer h3 {
+        margin: 0 0 12px;
+        font-family: var(--font-body);
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--ink);
+    }
+
+    footer section:first-child h3 {
+        font-family: var(--font-display);
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    footer p,
+    footer address {
         margin: 0;
-        padding: 0 40px;
+        font-style: normal;
+        line-height: 1.8;
+        color: var(--ink-soft);
+    }
+
+    footer nav ul,
+    footer ul {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        gap: 6px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
 
-    nav a {
-        display: block;
-        padding: 16px 0;
+    footer a {
+        color: var(--ink-soft);
         text-decoration: none;
-        color: white;
-        text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 2px;
-        font-size: 15px;
-        transition: opacity 0.3s ease;
     }
 
-        nav a:hover {
-            opacity: 0.75;
+        footer a:hover {
+            color: var(--ink);
+            text-decoration: underline;
         }
 
+/* =====================================================================
+   SHARED BUTTONS
+   ===================================================================== */
 
+/* Main call to action: "Book Now" links and the Confirm Booking button */
+.book-btn,
+.book-button a {
+    display: inline-block;
+    padding: 13px 30px;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 0;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+    .book-btn:hover,
+    .book-button a:hover {
+        background: var(--accent-hover);
+    }
+
+.book-button {
+    margin: 28px 0 0;
+}
+
+/* Secondary links: "Visit Website", "View Offers", "View Timetable" */
+.website-link a,
+.visit-button,
+a.offer-button,
+.offer-button a {
+    display: inline-block;
+    padding: 11px 22px;
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-sm);
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+    .website-link a:hover,
+    .visit-button:hover,
+    a.offer-button:hover,
+    .offer-button a:hover {
+        border-color: var(--ink-soft);
+        background: var(--surface);
+    }
+
+.website-link,
+p.offer-button {
+    margin: 24px 0 0;
+}
+
+.visit-button {
+    margin-top: 24px;
+}
+
+/* =====================================================================
+   SHARED FORM INPUTS
+   ===================================================================== */
+.input-box {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    margin: 0 0 16px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--ink);
+    background: #0A2630;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+    .input-box::placeholder {
+        color: #6F8F95;
+    }
+
+    .input-box:focus {
+        border-color: var(--primary);
+    }
+
+textarea.input-box {
+    resize: vertical;
+    min-height: 110px;
+}
+
+/* =====================================================================
+   SHARED DETAIL PAGE LAYOUT
+   (Tikos, An Pho, Hiking, Kayaking, Snorkeling, Island Hopping, Village,
+    Grand Pacific, Outrigger, Offers, Deals, Air, Bus, Taxi, About)
+   Photo banner with the title on it, then the text on the left and the
+   booking box (BookingCard.ascx) on the right.
+   ===================================================================== */
+:is(.tikos-background, .anpho-background, .hiking-background, .kayaking-background,
+    .snorkeling-background, .islands-background, .village-background,
+    .grandpacific-background, .outrigger-background, .offer-background,
+    .deals-background, .airtravel-background, .bus-background, .taxi-background) {
+    --band: clamp(280px, 44vh, 440px);
+    position: relative;
+    display: block;
+    min-height: 0;
+    padding: 0;
+    background: var(--bg);
+}
+
+    /* the photo */
+    :is(.tikos-background, .anpho-background, .hiking-background, .kayaking-background,
+        .snorkeling-background, .islands-background, .village-background,
+        .grandpacific-background, .outrigger-background, .offer-background,
+        .deals-background, .airtravel-background, .bus-background, .taxi-background)::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: var(--band);
+        background-image: linear-gradient(0deg, rgba(4, 20, 26, 0.85) 0%, rgba(4, 20, 26, 0.25) 55%, rgba(4, 20, 26, 0.15) 100%),
+                          var(--hero, linear-gradient(135deg, #0B4F5C 0%, #0E6E6A 100%));
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* the wave at the bottom of the photo */
+    :is(.tikos-background, .anpho-background, .hiking-background, .kayaking-background,
+        .snorkeling-background, .islands-background, .village-background,
+        .grandpacific-background, .outrigger-background, .offer-background,
+        .deals-background, .airtravel-background, .bus-background, .taxi-background)::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: calc(var(--band) - 50px);
+        height: 51px;
+        z-index: 1;
+        background: var(--wave) bottom / 100% 100% no-repeat;
+        pointer-events: none;
+    }
+
+:is(.tikos-overlay, .anpho-overlay, .hiking-overlay, .kayaking-overlay,
+    .snorkeling-overlay, .islands-overlay, .village-overlay,
+    .grandpacific-overlay, .outrigger-overlay, .offer-overlay,
+    .deals-overlay, .airtravel-overlay, .bus-overlay, .taxi-overlay) {
+    display: block;
+    padding: 0 5%;
+}
+
+:is(.tikos-content, .anpho-content, .hiking-content, .kayaking-content,
+    .snorkeling-content, .islands-content, .village-content,
+    .grandpacific-content, .outrigger-content, .offer-content,
+    .deals-content, .airtravel-content, .bus-content, .taxi-content) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: 56px;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: calc(var(--band) + 24px) 0 0;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    color: var(--ink-soft);
+}
+
+    /* text on the left, booking box on the right */
+    :is(.tikos-content, .anpho-content, .hiking-content, .kayaking-content,
+        .snorkeling-content, .islands-content, .village-content,
+        .grandpacific-content, .outrigger-content, .offer-content,
+        .deals-content, .airtravel-content, .bus-content, .taxi-content):has(> .side-card) {
+        grid-template-columns: minmax(0, 1fr) 320px;
+        max-width: 1180px;
+    }
+
+    /* the title sits on the photo, bottom-left */
+    :is(.tikos-content, .anpho-content, .hiking-content, .kayaking-content,
+        .snorkeling-content, .islands-content, .village-content,
+        .grandpacific-content, .outrigger-content, .offer-content,
+        .deals-content, .airtravel-content, .bus-content, .taxi-content) > section:first-child {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        height: var(--band);
+        display: flex;
+        align-items: flex-end;
+        padding: 0 5% 64px;
+    }
+
+    :is(.tikos-content, .anpho-content, .hiking-content, .kayaking-content,
+        .snorkeling-content, .islands-content, .village-content,
+        .grandpacific-content, .outrigger-content, .offer-content,
+        .deals-content, .airtravel-content, .bus-content, .taxi-content) h1 {
+        width: 100%;
+        max-width: 1180px;
+        margin: 0 auto;
+        font-family: var(--font-display);
+        font-size: clamp(36px, 5vw, 64px);
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        line-height: 1.05;
+        text-transform: none;
+        text-align: left;
+        color: #fff;
+        text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
+        animation: fadeUp 0.7s var(--ease) both;
+    }
+
+/* the info text */
+:is(.restaurant-info, .hiking-info, .kayaking-info, .snorkeling-info,
+    .islands-info, .village-info, .grandpacific-info, .outrigger-info,
+    .offer-info, .deals-info, .airtravel-info, .bus-info, .taxi-info) h2 {
+    margin: 36px 0 8px;
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--ink);
+}
+
+    :is(.restaurant-info, .hiking-info, .kayaking-info, .snorkeling-info,
+        .islands-info, .village-info, .grandpacific-info, .outrigger-info,
+        .offer-info, .deals-info, .airtravel-info, .bus-info, .taxi-info) > :first-child {
+        margin-top: 0;
+    }
+
+:is(.restaurant-info, .hiking-info, .kayaking-info, .snorkeling-info,
+    .islands-info, .village-info, .grandpacific-info, .outrigger-info,
+    .offer-info, .deals-info, .airtravel-info, .bus-info, .taxi-info) h3 {
+    margin: 20px 0 10px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+:is(.restaurant-info, .hiking-info, .kayaking-info, .snorkeling-info,
+    .islands-info, .village-info, .grandpacific-info, .outrigger-info,
+    .offer-info, .deals-info, .airtravel-info, .bus-info, .taxi-info) p {
+    margin: 0 0 12px;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--ink-soft);
+}
+
+:is(.restaurant-info, .hiking-info, .kayaking-info, .snorkeling-info,
+    .islands-info, .village-info, .grandpacific-info, .outrigger-info,
+    .offer-info, .deals-info, .airtravel-info, .bus-info, .taxi-info) ul {
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+    :is(.restaurant-info, .hiking-info, .kayaking-info, .snorkeling-info,
+        .islands-info, .village-info, .grandpacific-info, .outrigger-info,
+        .offer-info, .deals-info, .airtravel-info, .bus-info, .taxi-info) ul li {
+        padding: 6px 12px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        color: var(--ink);
+        font-size: 14px;
+        border-radius: var(--radius-sm);
+    }
+
+        :is(.restaurant-info, .hiking-info, .kayaking-info, .snorkeling-info,
+            .islands-info, .village-info, .grandpacific-info, .outrigger-info,
+            .offer-info, .deals-info, .airtravel-info, .bus-info, .taxi-info) ul li::before {
+            content: "\2713";
+            margin-right: 8px;
+            color: var(--primary);
+        }
+
+:is(.restaurant-info, .hiking-info, .kayaking-info, .snorkeling-info,
+    .islands-info, .village-info, .grandpacific-info, .outrigger-info,
+    .offer-info, .deals-info, .airtravel-info, .bus-info, .taxi-info) hr {
+    border: 0;
+    height: 1px;
+    margin: 40px 0;
+    background: var(--line);
+}
+
+:is(.restaurant-info, .hiking-info, .kayaking-info, .snorkeling-info,
+    .islands-info, .village-info, .grandpacific-info, .outrigger-info,
+    .offer-info, .deals-info, .airtravel-info, .bus-info, .taxi-info) figure {
+    margin: 0 0 20px;
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+
+    :is(.restaurant-info, .hiking-info, .kayaking-info, .snorkeling-info,
+        .islands-info, .village-info, .grandpacific-info, .outrigger-info,
+        .offer-info, .deals-info, .airtravel-info, .bus-info, .taxi-info) figure img {
+        display: block;
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+    }
+
+/* When the booking box is on the page, the Book Now buttons inside the
+   text are not needed (the box has them, with the price). */
+:is(.tikos-content, .anpho-content, .hiking-content, .kayaking-content,
+    .snorkeling-content, .islands-content, .village-content,
+    .grandpacific-content, .outrigger-content, .offer-content,
+    .deals-content, .airtravel-content, .bus-content, .taxi-content):has(> .side-card) .book-button {
+    display: none;
+}
+
+/* ---------- Booking box (BookingCard.ascx) ---------- */
+.side-card {
+    position: sticky;
+    top: 92px;
+    padding: 22px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+}
+
+.side-card-label {
+    margin: 0 0 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.side-card-item {
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+}
+
+    .side-card-item:first-of-type {
+        border-top: 0;
+        padding-top: 6px;
+    }
+
+    .side-card-item h3 {
+        margin: 0 0 2px;
+        font-family: var(--font-body);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.35;
+        color: var(--ink);
+    }
+
+.side-card-meta {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.side-card-price {
+    margin: 0 0 14px;
+    font-family: var(--font-display);
+    font-size: 34px;
+    line-height: 1;
+    color: var(--ink);
+}
+
+    .side-card-price span {
+        font-family: var(--font-body);
+        font-size: 13px;
+        color: var(--muted);
+        vertical-align: middle;
+    }
+
+.side-card-btn {
+    display: block;
+    padding: 12px;
+    text-align: center;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    transition: background-color 0.2s ease;
+}
+
+    .side-card-btn:hover {
+        background: var(--accent-hover);
+    }
+
+.side-card-note {
+    margin: 4px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* =====================================================================
+   SHARED PHOTO CARDS
+   (Explore, Plan, Activities, Restaurants, Tours, Transportation,
+    Accommodation)
+   ===================================================================== */
+:is(.explore-item, .plan-card, .accommodation-card, .activity-card,
+    .restaurant-card, .tour-card, .transport-card) {
+    --card-h: 300px;
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: transform 0.3s var(--ease), border-color 0.3s ease;
+}
+
+    :is(.explore-item, .plan-card, .accommodation-card, .activity-card,
+        .restaurant-card, .tour-card, .transport-card):hover {
+        transform: translateY(-3px);
+        border-color: var(--line-strong);
+    }
+
+    :is(.explore-item, .plan-card, .accommodation-card, .activity-card,
+        .restaurant-card, .tour-card, .transport-card) a {
+        display: block;
+        height: 100%;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    :is(.explore-item, .plan-card, .accommodation-card, .activity-card,
+        .restaurant-card, .tour-card, .transport-card) figure {
+        position: relative;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    :is(.explore-item, .plan-card, .accommodation-card, .activity-card,
+        .restaurant-card, .tour-card, .transport-card) img {
+        display: block;
+        width: 100%;
+        height: var(--card-h);
+        object-fit: cover;
+        transition: transform 0.6s var(--ease);
+    }
+
+    :is(.explore-item, .plan-card, .accommodation-card, .activity-card,
+        .restaurant-card, .tour-card, .transport-card):hover img {
+        transform: scale(1.03);
+    }
+
+    :is(.explore-item, .plan-card, .accommodation-card, .activity-card,
+        .restaurant-card, .tour-card, .transport-card) figcaption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 70px 22px 18px;
+        background: linear-gradient(to top, rgba(4, 20, 26, 0.88) 0%, rgba(4, 20, 26, 0.4) 60%, rgba(4, 20, 26, 0) 100%);
+        color: #fff;
+        font-family: var(--font-display);
+        font-size: 26px;
+        line-height: 1.15;
+        text-align: left;
+    }
+
+        /* small "View" link under each title */
+        :is(.explore-item, .plan-card, .accommodation-card, .activity-card,
+            .restaurant-card, .tour-card, .transport-card) figcaption::after {
+            content: "View \2192";
+            display: block;
+            margin-top: 8px;
+            font-family: var(--font-body);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        :is(.explore-item, .plan-card, .accommodation-card, .activity-card,
+            .restaurant-card, .tour-card, .transport-card):hover figcaption::after {
+            text-decoration: underline;
+        }
+
+        :is(.explore-item, .plan-card, .accommodation-card, .activity-card,
+            .restaurant-card, .tour-card, .transport-card) figcaption :is(h1, h2) {
+            margin: 0;
+            color: #fff;
+            font-family: var(--font-display);
+            font-size: 26px;
+            font-weight: 400;
+            letter-spacing: 0;
+            text-transform: none;
+            text-shadow: none;
+        }
+
+        :is(.explore-item, .plan-card, .accommodation-card, .activity-card,
+            .restaurant-card, .tour-card, .transport-card) figcaption p {
+            margin: 6px 0 0;
+            font-family: var(--font-body);
+            font-size: 14px;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+/* =====================================================================
+   VIDEO (Home)
+   ===================================================================== */
 .video-section {
     text-align: center;
-    padding: 60px 8%;
-    background: transparent;
-    border-top: 1px solid rgba(8, 143, 143, 0.25);
-    border-bottom: 1px solid rgba(8, 143, 143, 0.25);
+    padding: var(--section) 6%;
 }
 
     .video-section h2 {
-        font-family: Copperplate, Papyrus, fantasy;
-        font-size: 28px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        color: #96DED1;
-        margin-bottom: 12px;
+        margin: 0 0 8px;
+        font-size: 40px;
     }
 
     .video-section p {
-        color: #b0d8d8;
-        font-size: 15px;
-        margin-bottom: 30px;
+        margin: 0 0 28px;
+        color: var(--ink-soft);
+        font-size: 17px;
     }
 
 .video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
-    max-width: 860px;
+    max-width: 880px;
     margin: 0 auto;
-    border-radius: 12px;
-    border: 1px solid rgba(8, 143, 143, 0.4);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: 0 8px 40px rgba(8, 143, 143, 0.2);
+    background: #000;
 }
 
     .video-wrapper iframe {
@@ -173,248 +878,157 @@ nav {
         height: 100%;
         border: none;
     }
-    
 
-footer {
-    background-color: rgba(7, 13, 22, 0.95);
-    color: white;
-    padding: 60px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-    footer section {
-        flex: 1;
-        min-width: 220px;
-    }
-
-    footer h3 {
-        font-family: 'Trebuchet MS', sans-serif;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        font-size: 20px;
-    }
-
-    footer p,
-    footer address {
-        line-height: 1.7;
-        color: #e0e0e0;
-    }
-
-    footer nav,
-    footer nav ul {
-        background: none !important;
-        box-shadow: none;
-        padding: 0;
-        margin: 0;
-    }
-
-        footer nav ul,
-        footer ul {
-            display: flex;
-            flex-direction: column;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        footer nav li,
-        footer li {
-            margin-bottom: 12px;
-        }
-
-        footer nav a,
-        footer a {
-            text-decoration: none;
-            color: #96DED1;
-            font-weight: normal;
-            text-transform: capitalize;
-            letter-spacing: 1px;
-            padding: 0;
-            display: inline-block;
-        }
-
-            footer a:hover {
-                text-decoration: underline;
-            }
-
-/*RESPONSIVE DESIGN*/
-
-/* ===== TABLET (768px) ===== */
-@media (max-width: 768px) {
-
-    /* HEADER */
-    header {
-        height: auto;
-        padding: 12px 20px;
+/* =====================================================================
+   RESPONSIVE
+   ===================================================================== */
+@media (max-width: 1100px) {
+    .site-header {
         flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .header-left h1 {
-        font-size: 18px;
-        letter-spacing: 1px;
-    }
-
-    .header-left img {
-        height: 45px;
+        height: auto;
+        gap: 0 20px;
+        padding: 10px 20px 0;
     }
 
     .header-auth {
-        margin-right: 0;
+        margin-left: auto;
+    }
+
+    /* menu drops to its own row and scrolls sideways */
+    .main-nav {
+        order: 3;
+        flex-basis: 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        scrollbar-width: none;
+        margin-top: 8px;
+    }
+
+        .main-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .main-nav ul {
+            gap: 22px;
+        }
+
+        .main-nav a {
+            padding: 10px 0 12px;
+            font-size: 14px;
+        }
+}
+
+@media (max-width: 900px) {
+    /* booking box drops under the text */
+    :is(.tikos-content, .anpho-content, .hiking-content, .kayaking-content,
+        .snorkeling-content, .islands-content, .village-content,
+        .grandpacific-content, .outrigger-content, .offer-content,
+        .deals-content, .airtravel-content, .bus-content, .taxi-content):has(> .side-card) {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+    }
+
+    .side-card {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section: 44px;
+    }
+
+    .header-left img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .header-left h1 {
+        font-size: 20px;
+    }
+
+    :is(.tikos-content, .anpho-content, .hiking-content, .kayaking-content,
+        .snorkeling-content, .islands-content, .village-content,
+        .grandpacific-content, .outrigger-content, .offer-content,
+        .deals-content, .airtravel-content, .bus-content, .taxi-content) > section:first-child {
+        padding-bottom: 44px;
+    }
+
+    :is(.restaurant-info, .hiking-info, .kayaking-info, .snorkeling-info,
+        .islands-info, .village-info, .grandpacific-info, .outrigger-info,
+        .offer-info, .deals-info, .airtravel-info, .bus-info, .taxi-info) h2 {
+        font-size: 24px;
+        margin-top: 28px;
+    }
+
+    :is(.restaurant-info, .hiking-info, .kayaking-info, .snorkeling-info,
+        .islands-info, .village-info, .grandpacific-info, .outrigger-info,
+        .offer-info, .deals-info, .airtravel-info, .bus-info, .taxi-info) p {
+        font-size: 16px;
+    }
+
+    :is(.explore-item, .plan-card, .accommodation-card, .activity-card,
+        .restaurant-card, .tour-card, .transport-card) {
+        --card-h: 240px !important;
+    }
+
+    .video-section h2 {
+        font-size: 30px;
+    }
+
+    footer {
+        padding: 36px 6% 32px;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        padding: 8px 14px 0;
+    }
+
+    .header-left {
         gap: 8px;
+    }
+
+        .header-left h1 {
+            font-size: 18px;
+        }
+
+    .header-auth {
+        gap: 6px;
     }
 
     .login-link,
     .register-link {
         padding: 6px 12px;
-        font-size: 12px;
-    }
-
-    /* NAV */
-    nav ul {
-        flex-wrap: wrap;
-        padding: 0 20px;
-        justify-content: center;
-        gap: 0 16px;
-    }
-
-    nav a {
         font-size: 13px;
-        letter-spacing: 1px;
-        padding: 12px 0;
     }
 
-    /* VIDEO */
-    .video-section {
-        padding: 40px 5%;
-    }
-
-        .video-section h2 {
-            font-size: 22px;
-        }
-
-    /* FOOTER */
-    footer {
-        padding: 40px 5%;
-        gap: 30px;
-    }
-
-        footer section {
-            min-width: 160px;
-        }
-
-        footer h3 {
-            font-size: 16px;
-        }
-}
-
-/* ===== MOBILE (480px) ===== */
-@media (max-width: 480px) {
-
-    /* HEADER */
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        padding: 12px 16px;
-    }
-
-    .header-left h1 {
-        font-size: 15px;
-    }
-
-    .header-left img {
-        height: 38px;
-    }
-
-    .header-auth {
+    .book-button a,
+    .book-btn {
+        display: block;
         width: 100%;
-        justify-content: flex-start;
-        margin-right: 0;
+        text-align: center;
     }
 
-    .login-link,
-    .register-link {
-        padding: 5px 10px;
-        font-size: 11px;
-    }
-
-    /* NAV */
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-        gap: 0;
-    }
-
-        nav ul li {
-            width: 100%;
-            text-align: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-    nav a {
-        font-size: 13px;
-        padding: 12px 0;
-    }
-
-    /* VIDEO */
-    .video-section {
-        padding: 30px 4%;
-    }
-
-        .video-section h2 {
-            font-size: 18px;
-            letter-spacing: 1px;
-        }
-
-    /* FOOTER */
     footer {
         flex-direction: column;
-        padding: 30px 5%;
-        gap: 24px;
     }
 
         footer section {
-            min-width: unset;
+            min-width: 0;
             width: 100%;
         }
-
-        footer h3 {
-            font-size: 15px;
-            margin-bottom: 12px;
-        }
 }
 
-.header-search {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.search-input {
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-radius: 20px 0 0 20px;
-    outline: none;
-    font-size: 0.9em;
-    width: 200px;
-}
-
-.search-btn {
-    padding: 6px 14px;
-    border: none;
-    border-radius: 0 20px 20px 0;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    font-size: 0.9em;
-}
-
-    .search-btn:hover {
-        background-color: #0056b3;
+/* People who turn off animations in their system settings get none */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
     }
+}

@@ -3,7 +3,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <title>Manage Feedback</title>
-    <link href="/style/Admin.css" rel="stylesheet" type="text/css" />
+    <link href="/style/Admin.css?v=dark2" rel="stylesheet" type="text/css" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

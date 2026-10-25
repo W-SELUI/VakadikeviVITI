@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Home" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeFile="Home.aspx.vb" Inherits="Assignment_2.Home" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <link href="/style/Home.css?v=999" rel="stylesheet" type="text/css" />
+    <link href="/style/Home.css?v=dark2" rel="stylesheet" type="text/css" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

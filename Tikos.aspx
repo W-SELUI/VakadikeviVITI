@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="Tiko's Floating Restaurant" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeFile="Tikos.aspx.vb" Inherits="Assignment_2.Tikos" %>
+<%@ Register Src="~/BookingCard.ascx" TagPrefix="uc" TagName="BookingCard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <link href="/style/Tikos.css" rel="stylesheet" type="text/css" />
+    <link href="/style/Tikos.css?v=dark2" rel="stylesheet" type="text/css" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -47,6 +48,10 @@
                     </p>
 
                 </section>
+
+                <!-- Booking box (price + Book Now) -->
+                <uc:BookingCard ID="BookingCard1" runat="server" PackageIDs="1" />
+
 
             </article>
 

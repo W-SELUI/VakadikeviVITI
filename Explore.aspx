@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Explore" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeFile="Explore.aspx.vb" Inherits="Assignment_2.Explore" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <link href="/style/Explore.css" rel="stylesheet" type="text/css" />
+    <link href="/style/Explore.css?v=dark2" rel="stylesheet" type="text/css" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

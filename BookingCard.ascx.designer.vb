@@ -11,6 +11,10 @@ Option Strict On
 Option Explicit On
 
 
+Partial Public Class BookingCard
 
-Partial Public Class Search
+    '''<summary>
+    '''rptPackages control.
+    '''</summary>
+    Protected WithEvents rptPackages As Global.System.Web.UI.WebControls.Repeater
 End Class

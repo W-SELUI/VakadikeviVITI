@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="Islands Hopping in Fiji" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeFile="IslandsHopping.aspx.vb" Inherits="Assignment_2.IslandsHopping" %>
+<%@ Register Src="~/BookingCard.ascx" TagPrefix="uc" TagName="BookingCard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <link href="/style/IslandsHopping.css" rel="stylesheet" type="text/css" />
+    <link href="/style/IslandsHopping.css?v=dark2" rel="stylesheet" type="text/css" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -44,6 +45,10 @@
                      </p>
 
                 </section>
+
+                <!-- Booking box (price + Book Now) -->
+                <uc:BookingCard ID="BookingCard1" runat="server" PackageIDs="6" />
+
 
             </article>
 

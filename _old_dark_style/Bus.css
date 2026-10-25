@@ -1,0 +1,138 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap');
+
+.bus-background {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('/Images/Bus.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 5%;
+}
+
+.bus-overlay {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bus-content {
+    width: 100%;
+    max-width: 950px;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(6px);
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+    .bus-content h1 {
+        color: white;
+        font-size: 56px;
+        font-family: 'Cinzel', serif;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        text-align: center;
+        margin: 0 0 35px 0;
+        text-shadow: 0 5px 15px rgba(0,0,0,0.7);
+    }
+
+.bus-info h2 {
+    color: #ffd369;
+    font-size: 26px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+.bus-info p {
+    color: #f5f5f5;
+    font-size: 18px;
+    line-height: 1.9;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.visit-button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 35px;
+    background: #ffd369;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+    .visit-button:hover {
+        background: white;
+        transform: translateY(-3px);
+    }
+
+@media (max-width: 768px) {
+
+    .bus-background {
+        padding: 40px 5%;
+        background-attachment: scroll;
+    }
+
+    .bus-content {
+        padding: 35px;
+    }
+
+        .bus-content h1 {
+            font-size: 38px;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+
+    .bus-info h2 {
+        font-size: 22px;
+    }
+
+    .bus-info p {
+        font-size: 16px;
+    }
+
+    .visit-button {
+        font-size: 16px;
+        padding: 12px 28px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .bus-background {
+        padding: 30px 4%;
+    }
+
+    .bus-content {
+        padding: 25px;
+        border-radius: 18px;
+    }
+
+        .bus-content h1 {
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+
+    .bus-info h2 {
+        font-size: 18px;
+    }
+
+    .bus-info p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .visit-button {
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+    }
+}

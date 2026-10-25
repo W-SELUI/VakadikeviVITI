@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Tours in Fiji" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeFile="Tours.aspx.vb" Inherits="Assignment_2.Tours" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <link href="/style/Tours.css" rel="stylesheet" type="text/css" />
+    <link href="/style/Tours.css?v=dark2" rel="stylesheet" type="text/css" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

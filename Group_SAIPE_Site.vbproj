@@ -301,6 +301,7 @@
     <Content Include="Transportation.aspx" />
     <Content Include="Village.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Database\CreateDatabase.sql" />
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
@@ -587,6 +588,13 @@
       <DependentUpon>Transportation.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="BookingCard.ascx.vb">
+      <DependentUpon>BookingCard.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookingCard.ascx.designer.vb">
+      <DependentUpon>BookingCard.ascx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -630,6 +638,7 @@
     <Content Include="Site.Master" />
     <Content Include="Site.Mobile.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="BookingCard.ascx" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.0.min.map" />

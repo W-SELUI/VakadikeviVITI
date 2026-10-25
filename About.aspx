@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="About" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeFile="About.aspx.vb" Inherits="Assignment_2.About" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <link href="/style/About.css" rel="stylesheet" type="text/css" />
+    <link href="/style/About.css?v=dark2" rel="stylesheet" type="text/css" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -38,7 +38,7 @@
     </figure>
     <section class="dev-info">
         <h2>Elizabeth Taufa</h2>
-        <p>Email: elizabethtaufa06@gmail.com</p>
+        <p>Email: etaufa@gmail.com</p>
         <p>Short Bio: Focused on backend development and managing data-driven systems.</p>
         <p>Preferences: Backend development, SQL, APIs</p>
     </section>
@@ -51,7 +51,7 @@
     </figure>
     <section class="dev-info">
         <h2>Sulieti Nau</h2>
-        <p>Email: nsulieti@gmail.com</p>
+        <p>Email: snau@gmail.com</p>
         <p>Short Bio: Passionate about creating clean and interactive user interfaces.</p>
         <p>Preferences: Frontend development, UI design, Figma</p>
     </section>
@@ -64,7 +64,7 @@
     </figure>
     <section class="dev-info">
         <h2>Elisapeta Tauheluhelu</h2>
-        <p>Email: litatauheluhelu06@gmail.com</p>
+        <p>Email: etauheluhelu@gmail.com</p>
         <p>Short Bio: Enjoys designing smooth and visually appealing user experiences.</p>
         <p>Preferences: Frontend development, UI/UX design, creative tools</p>
     </section>

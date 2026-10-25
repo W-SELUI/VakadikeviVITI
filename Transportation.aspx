@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Transportation" Language="VB" MasterPageFile="~/Master.master" AutoEventWireup="false" CodeFile="Transportation.aspx.vb" Inherits="Assignment_2.Transportation" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <link href="/style/Transportation.css" rel="stylesheet" type="text/css" />
+    <link href="/style/Transportation.css?v=dark2" rel="stylesheet" type="text/css" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

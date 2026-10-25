@@ -2,7 +2,7 @@
     CodeFile="Feedback.aspx.vb" Inherits="Assignment_2.Feedback" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <link href="/style/Feedback.css" rel="stylesheet" type="text/css" />
+    <link href="/style/Feedback.css?v=dark2" rel="stylesheet" type="text/css" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
